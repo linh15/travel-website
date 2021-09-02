@@ -84,6 +84,10 @@ nav ul { /*child element of nav */
   padding: 5rem;
 }
 
+/* LOCATIONS SECTION  */
+
+
+/* MEDIA QUERY */
 /* when the screen width gets smaller than 950px, the settings in media query come into effect, very useful when making website look good in small devices, can test diffent phones size with chrome inspect, can create a new media query with another max-width for another device */
 @media screen and (max-width: 950px) {
   html {
