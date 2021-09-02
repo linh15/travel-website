@@ -8,6 +8,9 @@
 html {
   font-size: 62.5%;
 }
+body {
+  font-family: 'Poppins', sans-serif;
+}
 h1 {
   font-size: 2.6rem;
 }
@@ -19,6 +22,7 @@ h2 {
 }
 h3 {
   font-size: 3rem;
+  font-weight: normal; /* text not bold */
 }
 h4,h5 {
   font-size: 2.8rem;
@@ -27,8 +31,17 @@ a {
   color: white;
   text-decoration: none;
 }
+button {
+  padding: 2rem 6rem;
+  background: #4c6e97;
+  border: none;
+  color: white;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
 
 /* Nav Section With HERO  */
+
 .main-head {
   background: #131c27;
   color: white;
@@ -40,9 +53,12 @@ nav { /* parent element */
   padding: 2rem;
   min-height: 10vh; /* when resize the window, the bar doesn't get smaller than 1/10 of the screen */
   align-items: center;
+  flex-wrap: wrap; /* mobile friendly, ul not collapsed but jump to the next line when screen is smaller */
 }
 #logo { /*child element of nav */
   flex: 2 1 40rem;
+  font-family: 'Pattaya', sans-serif;
+  font-weight: normal; /* text not bold */
 }
 nav ul { /*child element of nav */
   display: flex;
@@ -50,4 +66,33 @@ nav ul { /*child element of nav */
   justify-content: space-around;
   align-items: center;
   list-style: none;
+}
+.hero {
+  min-height: 90vh;
+  background: linear-gradient(rgb(0,0,0,0.2),transparent) ,url("img/landing-page.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.hero h3 {
+  padding: 5rem;
+}
+
+/* when the screen width gets smaller than 950px, the settings in media query come into effect, very useful when making website look good in small devices, can test diffent phones size with chrome inspect, can create a new media query with another max-width for another device */
+@media screen and (max-width: 950px) {
+  html {
+    font-size: 45%;
+  }
+  nav {
+    text-align: center;
+  }
+  #logo {
+    padding: 1rem;
+  }
 }
