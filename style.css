@@ -38,7 +38,7 @@ nav { /* parent element */
   width: 90%; /*leave 10% width for margin, 5% for left and 5% for right */
   margin: auto; /*auto get 5% for each margin left and right */
   padding: 2rem;
-  min-height: 10vh;
+  min-height: 10vh; /* when resize the window, the bar doesn't get smaller than 1/10 of the screen */
   align-items: center;
 }
 #logo { /*child element of nav */
