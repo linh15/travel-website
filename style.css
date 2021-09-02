@@ -1,0 +1,53 @@
+/* Global style  */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 62.5%;
+}
+h1 {
+  font-size: 2.6rem;
+}
+li,button,label,input,p {
+  font-size: 2rem;
+}
+h2 {
+  font-size: 4.8rem;
+}
+h3 {
+  font-size: 3rem;
+}
+h4,h5 {
+  font-size: 2.8rem;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+
+/* Nav Section With HERO  */
+.main-head {
+  background: #131c27;
+  color: white;
+}
+nav { /* parent element */
+  display: flex;
+  width: 90%; /*leave 10% width for margin, 5% for left and 5% for right */
+  margin: auto; /*auto get 5% for each margin left and right */
+  padding: 2rem;
+  min-height: 10vh;
+  align-items: center;
+}
+#logo { /*child element of nav */
+  flex: 2 1 40rem;
+}
+nav ul { /*child element of nav */
+  display: flex;
+  flex: 1 1 40rem;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+}
