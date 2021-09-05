@@ -38,6 +38,10 @@ button {
   color: white;
   font-size: 1.8rem;
   cursor: pointer;
+  transition: background 0.5s ease-in-out;
+}
+button:hover {
+  background: #27394e;
 }
 
 /* Nav Section With HERO  */
@@ -69,7 +73,7 @@ nav ul { /*child element of nav */
 }
 .hero {
   min-height: 90vh;
-  background: linear-gradient(rgb(0,0,0,0.2),transparent) ,url("img/landing-page.jpg");
+  background: linear-gradient(rgb(0,0,0,0.2),transparent), url("img/landing-page.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -85,7 +89,57 @@ nav ul { /*child element of nav */
 }
 
 /* LOCATIONS SECTION  */
+#locations {
+  min-height: 100vh;
+  background: linear-gradient(rgb(0,0,0,0.2),transparent), url("img/new-york-page.png");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* hide everything that goes out of the section*/
+  /* z-index: 0; */
+}
+.locations-head {
+  width: 90%;
+  margin: auto;
+}
+.locations-head h2 {
+  padding: 1rem 0rem;
+  text-decoration: underline;
+  text-decoration-thickness: 0.5rem; /* make the text thicker */
+}
+.locations-head h3 {
+  padding: 4rem 0rem;
+  background: linear-gradient(#131c27,#663b34);
+  -webkit-background-clip: text; /* only works with Chrome if browser prefix -webkit is included, so always use it */
+  -webkit-text-fill-color: transparent;
+}
 
+.cloud {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+}
+.moving-cloud-1 {
+  animation: cloudAnimation 3s infinite alternate ease-in-out;
+  z-index: -1; /* set z-index so the cloud stays under the text, which by default has z-index 0 */
+}
+.moving-cloud-2 {
+  top: 20%;
+  z-index: -2; /* set z-index so the cloud stays under the text, which by default has z-index 0 */
+  opacity: 0.5;
+  animation: cloudAnimation 3.5s infinite alternate ease-in-out;
+}
+
+@keyframes cloudAnimation {
+  from {
+    transform: translate(10%, -10%); /* move the cloud back and forth 10%, x and y axis */
+  }
+  to {
+    transform: translate(0%, 0%);
+  }
+}
 
 /* MEDIA QUERY */
 /* when the screen width gets smaller than 950px, the settings in media query come into effect, very useful when making website look good in small devices, can test diffent phones size with chrome inspect, can create a new media query with another max-width for another device */
@@ -99,4 +153,12 @@ nav ul { /*child element of nav */
   #logo {
     padding: 1rem;
   }
+  .cloud {
+    height: 40rem;
+    pointer-events: none; /* users cannot grab the cloud, now they can grab/select the text */
+  }
+  .locations-head h3 {
+    background: rgb(19,28,39,0.8);
+    -webkit-text-fill-color: white;
+  } /* change text color and its background so that the paragraph stands out in the photo when users use small size devices */
 }
