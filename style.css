@@ -44,7 +44,7 @@ button:hover {
   background: #27394e;
 }
 
-/* Nav Section With HERO  */
+/* NAVIGATION BAR SECTION WITH HERO  */
 
 .main-head {
   background: #131c27;
@@ -140,6 +140,49 @@ nav ul { /*child element of nav */
     transform: translate(0%, 0%);
   }
 }
+
+/* BENEFITS SECTION */
+.benefits-head {
+  background: #343c44;
+  padding: 3rem;
+  min-height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+}
+.benefits-head h3 {
+  padding: 1rem;
+}
+.cards {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  min-height: 70vh;
+  align-items: center; /* without this, the card takes up the whole space of the parent */
+  flex-wrap: wrap; /* when resize to smaller screens like phone, the cards move down to 1 column */
+  text-align: center;
+}
+.card {
+  flex: 1 1 25rem; /* 25rem is the width, makes it responsive when we resize the page */
+  min-height: 40vh;
+  margin: 2rem 5rem;
+  box-shadow: 0px 10px 10px rgb(0,0,0,0.1), 0px 20px 20px rgb(0,0,0,0.1); /* x y blur color; 2 box shadows, intense at the beginning and fading at the end */
+}
+.card-icon {
+  background: #4c6e97;
+}
+.cards img {
+  max-width: 15%;
+  margin: 2rem;
+}
+.card h4, .card p {
+  padding: 1rem;
+}
+
+
 
 /* MEDIA QUERY */
 /* when the screen width gets smaller than 950px, the settings in media query come into effect, very useful when making website look good in small devices, can test diffent phones size with chrome inspect, can create a new media query with another max-width for another device */
