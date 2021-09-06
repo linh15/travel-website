@@ -49,6 +49,9 @@ button:hover {
 .main-head {
   background: #131c27;
   color: white;
+  position: sticky;
+  top: 0px;
+  z-index: 1; /* make sure the navbar is on top of all other layers */
 }
 nav { /* parent element */
   display: flex;
