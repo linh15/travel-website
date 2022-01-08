@@ -76,24 +76,29 @@ nav ul { /*child element of nav */
 }
 .hero {
   min-height: 90vh;
-  background: linear-gradient(rgb(0,0,0,0.2),transparent), url("img/landing-page.jpg");
+  background: linear-gradient(rgb(0,0,0,0),transparent), url("img/harbor-victoria.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   color: white;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   text-align: center;
 }
+
+.hero h2 {
+  padding-top: 5rem;
+}
 .hero h3 {
-  padding: 5rem;
+  padding: 3rem;
 }
 
 /* LOCATIONS SECTION  */
 #locations {
   min-height: 100vh;
+  /* background: linear-gradient(rgb(0,0,0,0.2),transparent), url("img/new-york-page.png"); */
   background: linear-gradient(rgb(0,0,0,0.2),transparent), url("img/new-york-page.png");
   background-size: cover;
   background-position: center;
@@ -189,7 +194,7 @@ nav ul { /*child element of nav */
 /* CONTACT section */
 #contact {
   min-height: 100vh;
-  background: linear-gradient(rgb(0,0,0,0.2),transparent), url("img/contact-mountain.png");
+  background: linear-gradient(rgb(0,0,0,0.2),transparent), url("img/contact-lake.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
@@ -198,26 +203,26 @@ nav ul { /*child element of nav */
 }
 .form-wrapper {
   background: rgb(19,28,39,0.8);
-  width: 60%;
+  width: 50%;
   color: white;
   border-radius: 20px;
 }
 .form-head {
   text-align: center;
-  padding: 4rem;
+  padding: 3rem;
 }
 .name-form,
 .email-form {
-  padding: 3rem;
+  padding: 2rem;
   text-align: center;
 }
 .form-wrapper label {
-  margin: 0rem 3rem;
+  margin: 0rem 2rem;
 }
 .form-wrapper button {
   width: 100%;
   padding: 2rem;
-  margin-top: 8rem;
+  margin-top: 5rem;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
